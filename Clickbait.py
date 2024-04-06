@@ -23,7 +23,7 @@ def set_background():
          f"""
          <style>
          .stApp {{
-             background: url("https://raw.githubusercontent.com/akshitdhiman01/app_design_flask/main/starry_night.jpg");
+             background: url("https://raw.githubusercontent.com/akshitdhiman01/streamlit_app/main/starry_night.jpg");
              background-size: cover
          }}
          </style>
@@ -54,7 +54,7 @@ if st.session_state.page == 0:
         
 """, unsafe_allow_html=True)
         
-    st.image('D:/Scientific clickbait/Scientific.png')
+    st.image('https://raw.githubusercontent.com/akshitdhiman01/streamlit_app/main/Scientific.png')
     st.title("Scientific Clickbait")
     st.subheader("Crafting Captivating Titles for Academic Papers:")
     st.subheader("Enhancing Engagement and Impact")
@@ -79,8 +79,6 @@ if st.session_state.page == 0:
 
     username_input=col.text_input('Username:')
     password_input = col.text_input('Password', type='password')
-    # username_input = st.text_input('Username:')
-    # password_input = st.text_input('Password', type='password')
 
     if col.button("Login"):
         if username_input == default_username and password_input == default_password:
@@ -119,7 +117,7 @@ elif st.session_state.page == 1:
         
 """, unsafe_allow_html=True)
 
-    st.image('D:/Scientific clickbait/Scientific.png')
+    st.image('https://raw.githubusercontent.com/akshitdhiman01/streamlit_app/main/Scientific.png')
     st.title("Scientific Clickbait")
     st.subheader("Crafting Captivating Titles for Academic Papers:")
     st.subheader("Enhancing Engagement and Impact")
@@ -143,6 +141,7 @@ elif st.session_state.page == 1:
 
     # Display keywords
     if st.session_state.keywords:
+        reads = 500
         col.write(f"Keywords: {st.session_state.keywords}")
     
     # Generate title button
